@@ -1,0 +1,42 @@
+{
+  "name": "Tiki Assistant",
+  "description": "Giúp bạn tìm thấy sản phẩm tốt nhất từ Tiki",
+  "version": "1.0",
+  "browser_action": {
+    "default_icon": "images/32x32.png",
+    "icons": {
+      "16": "images/16x16.png",
+      "32": "images/32x32.png",
+      "48": "images/48x48.png",
+      "128": "images/128x128.png"
+    }
+  },
+  "permissions": [
+    "activeTab"
+  ],
+  "content_scripts": [
+    {
+      "all_frames": true,
+      "matches": [
+        "https://www.google.com/*"
+      ],
+      "css": ["contentStyle.css"],
+      "js": ["contentScript.js"]
+   	}
+  ],
+  "icons": {
+    "16": "images/16x16.png",
+    "32": "images/32x32.png",
+    "48": "images/48x48.png",
+    "128": "images/128x128.png"
+  },
+  "background": {
+    "persistent": false,
+    "scripts": ["background.js"]
+  },
+  "content_security_policy": "script-src 'self' 'sha256-nD2V5NxKeHpfJmcOwNBIOJIpT5MiKJJ9cTve5ZZRZGk='",
+  "web_accessible_resources": [
+    "frame.html"
+  ],
+  "manifest_version": 2
+}
