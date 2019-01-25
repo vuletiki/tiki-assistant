@@ -71,10 +71,11 @@ var App = {
 		var keyword = this.getKeyword();
 		if (keyword) {
 			this.init(keyword);
-			if (getOrigin() == SHOPEE) {
-				// for spa
-				this.startTimeoutSpa();
-			}
+		}
+
+		if (getOrigin() == SHOPEE) {
+			// for spa
+			this.startTimeoutSpa();
 		}
 	},
 	startTimeoutSpa() {
@@ -85,7 +86,7 @@ var App = {
 				_this.init(_this.getKeyword());
 			}
 			_this.startTimeoutSpa();
-		}, 2000);
+		}, 1000);
 	},
 	init(keyword) {
 		this.lastKeyword = keyword;
@@ -147,4 +148,4 @@ var App = {
 // timeout to make sure not effect to user page speed
 setTimeout(function() {
 	App.start();
-}, 1000)
+}, 500)
