@@ -20,9 +20,7 @@
     {
       "all_frames": true,
       "matches": [
-        "https://shopee.vn/*",
-        "https://www.lazada.vn/*",
-        "https://www.google.com/*"
+        "<all_urls>"
       ],
       "css": ["contentStyle.css"],
       "js": ["contentScript.js"]

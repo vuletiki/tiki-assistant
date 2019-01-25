@@ -92,7 +92,6 @@ var App = {
 		this.lastKeyword = keyword;
 		this.clearIframe();
 		if(keyword) {
-			console.log(keyword)
 			this.initIframe(keyword);
 		}
 	},
