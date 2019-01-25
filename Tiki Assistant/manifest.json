@@ -11,6 +11,8 @@
       "128": "images/128x128.png"
     }
   },
+  "homepage_url": "http://tiki.vn",
+  "author": "Tiki",
   "permissions": [
     "activeTab"
   ],
@@ -18,6 +20,8 @@
     {
       "all_frames": true,
       "matches": [
+        "https://shopee.vn/*",
+        "https://www.lazada.vn/*",
         "https://www.google.com/*"
       ],
       "css": ["contentStyle.css"],

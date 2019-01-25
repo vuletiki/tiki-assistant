@@ -83,17 +83,24 @@ var App = {
 		this.timeoutSpa = setTimeout(function() {
 			if (_this.getKeyword() != _this.lastKeyword) {
 				_this.init(_this.getKeyword());
-			} else {
-				_this.startTimeoutSpa();
 			}
+			_this.startTimeoutSpa();
 		}, 2000);
 	},
 	init(keyword) {
 		this.lastKeyword = keyword;
 		this.clearIframe();
-		this.initIframe(keyword);
+		if(keyword) {
+			console.log(keyword)
+			this.initIframe(keyword);
+		}
 	},
 	clearIframe() {
+		// close iframe
+		let docClass = document.getElementsByTagName("html")[0].className;
+		docClass = docClass.replace("tiki-ext", "");
+		document.getElementsByTagName("html")[0].className = docClass;
+
 		var extDoms = document.getElementsByClassName("tiki-ext-container");
 		if (extDoms.length > 0) {
 			for (var i = 0; i < extDoms.length; i++) {
@@ -137,4 +144,7 @@ var App = {
 	}
 };
 
-App.start();
+// timeout to make sure not effect to user page speed
+setTimeout(function() {
+	App.start();
+}, 1000)
