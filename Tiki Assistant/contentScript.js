@@ -10,6 +10,7 @@ function getParameterByName(name, url) {
 var SHOPEE = "shopee";
 var LAZ = "laz";
 var GOOGLE = "google";
+var E_COMERCE_LIST = ['adayroi', 'lazada', 'shopee', 'adayroi', 'thegioididong'];
 var getOrigin = function() {
 	if (window.origin == "https://shopee.vn") {
 		return SHOPEE;
@@ -69,7 +70,8 @@ var App = {
 	},
 	start() {
 		var keyword = this.getKeyword();
-		if (keyword) {
+		var isEcomerceKeyword = this.detectEcomerceKeyword();
+		if (keyword && isEcomerceKeyword) {
 			this.init(keyword);
 		}
 
@@ -141,6 +143,21 @@ var App = {
 				document.getElementsByTagName("html")[0].className = docClass;
 			}
 		});
+	},
+	detectEcomerceKeyword() {
+		var isEcomerceKeyword = false;
+		var origin = getOrigin();
+		if(origin === GOOGLE) {
+			var documentText = document.getElementsByTagName('body')[0].innerText;
+			E_COMERCE_LIST.forEach(function(siteName) {
+				if(documentText.indexOf(siteName) != -1) {
+					isEcomerceKeyword = true;
+				}
+			})
+		} else {
+			isEcomerceKeyword = true;
+		}
+		return isEcomerceKeyword;
 	}
 };
 
