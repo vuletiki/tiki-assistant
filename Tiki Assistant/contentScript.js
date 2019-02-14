@@ -10,7 +10,7 @@ function getParameterByName(name, url) {
 var SHOPEE = "shopee";
 var LAZ = "laz";
 var GOOGLE = "google";
-var E_COMERCE_LIST = ['adayroi', 'lazada', 'shopee', 'adayroi', 'thegioididong'];
+var E_COMERCE_LIST = ['adayroi.com', 'lazada.com', 'shopee.vn', 'tiki.vn', 'thegioididong.com', 'sendo.vn'];
 var getOrigin = function() {
 	if (window.origin == "https://shopee.vn") {
 		return SHOPEE;
