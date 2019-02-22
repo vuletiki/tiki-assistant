@@ -1,0 +1,26 @@
+html.tiki-ext {
+  margin-top: 82px !important;
+  position: relative !important; }
+  html.tiki-ext .tiki-ext-container {
+    display: table; }
+  html.tiki-ext .lzd-header .lzd-header-content-wrap.lzd-header-sticky {
+    top: 82px !important;
+    position: fixed; }
+  html.tiki-ext .mui-zebra-module .lzd-header .lzd-header-content-wrap {
+    top: 82px !important; }
+  html.tiki-ext .lzd-home-page-category .mui-zebra-module .lzd-site-nav-menu-active {
+    top: 155px !important; }
+  html.tiki-ext div#searchform.minidiv {
+    top: 84px !important; }
+
+.tiki-ext-container {
+  display: none;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 999999;
+  background: #fff;
+  border-bottom: 4px solid #1ba8ff;
+  font-size: 0;
+  box-shadow: 0 7px 8px 0 rgba(0, 0, 0, 0.19); }
+

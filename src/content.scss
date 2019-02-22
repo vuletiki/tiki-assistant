@@ -1,0 +1,33 @@
+html.tiki-ext {
+    margin-top: 82px!important;
+    position: relative!important;
+    .tiki-ext-container {
+        display: table;
+    }
+    .lzd-header .lzd-header-content-wrap.lzd-header-sticky {
+        top: 82px!important;
+        position: fixed;
+    }
+    .mui-zebra-module .lzd-header .lzd-header-content-wrap {
+        top: 82px!important;
+    }
+    .lzd-home-page-category .mui-zebra-module .lzd-site-nav-menu-active {
+        top: 155px!important;
+    }
+    div#searchform.minidiv {
+        top: 84px!important;
+    }
+
+}
+
+.tiki-ext-container {
+    display: none;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 999999;
+    background: #fff;
+    border-bottom: 4px solid #1ba8ff;
+    font-size: 0;
+    box-shadow: 0 7px 8px 0 rgba(0, 0, 0, 0.19);
+}
